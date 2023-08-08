@@ -1,17 +1,19 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    Scanner scan=new Scanner (System.in);
+    Book book0 = new Book("betme met",40, "Chingiz Aitmatov");
+    Book book1 = new Book("Uzak jol",7, "Mukai elebaev");
+    Book book2 = new Book("birinchi mugalim",80, "aitmatov Chyngyz");
+    Book book3 = new Book("ru",30, "hurakami ru ");
+    Book book4 = new Book("Becoming",10, "Michael Obama");
+    Book book5 = new Book("Syngankylych",5, "Tologon Kasymbekiv");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    Book [] books = { book1, book2, book3,book4,book5};
+    Library library = new Library("bilimkana", "Chyngys A ulica 454",books);
+        System.out.println( library.updateBookByName("Becoming",38));
+        System.out.println(Arrays.toString(library.removeBookFromLibrary(new Book[]{book0}, "betme bet")));
+        System.out.println(library);
     }
 }
